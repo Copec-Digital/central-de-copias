@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/shared/theme-provider";
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
@@ -6,7 +6,10 @@ import "./globals.css";
 const workSans = Work_Sans({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Central de Cópias Copec",
+  title: {
+    template: "%s | Central de Cópias Copec",
+    default: "Central de Cópias Copec",
+  },
   description: "Sistema completo de gestão para centrais de cópias.",
 };
 
